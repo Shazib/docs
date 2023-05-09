@@ -28,6 +28,10 @@ This repository holds all of the primary code for the Actual Budget application,
 │
 ```
 
+### API
+
+The code for the backend API that allows you to interact with Actual.
+
 ### Desktop Client
 
 While this is called Desktop Client, this actually has nothing to do with the desktop, this package forms the front end code for the Actual Web app, the code that you see when you load Actual in your browser.
