@@ -8,13 +8,11 @@ All of the repositories can be found in the [Actual Budget](https://github.com/a
 
 - [Actual](https://github.com/actualbudget/actual)
 - [Actual Server](https://github.com/actualbudget/actual-server)
-- [Releases](https://github.com/actualbudget/releases)
-- [node-api](https://github.com/actualbudget/node-api)
 - [docs](https://github.com/actualbudget/docs)
 
 ## Actual
 
-This repository holds all of the front end code for the Actual Budget application, along with the syncing engine and the importers for YNAB4 and YNAB5.
+This repository holds all of the primary code for the Actual Budget application, and the importers for YNAB4 and YNAB5. This contains all the logic to run Actual standalone, without the synchronization element, which the [server](#actual-server) is responsible for.
 
 ```
 ├── actual
@@ -25,7 +23,6 @@ This repository holds all of the front end code for the Actual Budget applicatio
         └── import-ynab4
         └── import-ynab5
         └── loot-core
-        └── loot-design
         └── node-libofx
         ...
 │
@@ -37,7 +34,7 @@ While this is called Desktop Client, this actually has nothing to do with the de
 
 ### Desktop Electron
 
-This is the source code for the Desktop application, in it's current state it is not configured to work with the self hosted version of Actual Budget, however the source code is available for this to be completed.
+This is the source code for the Desktop application, work is on-going for this to support the seld hosted version of actual.
 
 ### Import ynab4
 
@@ -49,9 +46,11 @@ The development version of the importer for nYNAB into Actual.
 
 ### Loot Core
 
-### Loot Design
+This contains the source code for the back-end of Actual. This runs alongside and connects to the front-end as part of Actual.
 
 ### Node Libofx
+
+This is a wrapper around a C++ OFX library. OFX is a file format for financial information. It is unlikely you will need to make changes to this pacakge.
 
 ## Actual Server
 
@@ -78,9 +77,3 @@ You can see this in the [package.json](https://github.com/actualbudget/actual-se
 So, you might see some changes being made in the Actual repository but them changes are not reflected in your deployment despite you having the latest version pulled, why? Because Actual hasn't been updated in [npm](https://www.npmjs.com/package/@actual-app/web).
 
 Actual is only updated in npm when a release is created.
-
-## Actual Releases
-
-This repository holds all of the official releases of Actual Budget, each release gets a tagged and each element of the Actual Budget project can be downloaded.
-
-As of right now 0.0.148 is the latest official release.
